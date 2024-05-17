@@ -15,3 +15,9 @@ Dentro del método getInstance(), se comprueba si la instancia es nula. Si es nu
 El método showMessage() simplemente imprime un mensaje en la consola.
 
 En la clase App, en el método main(), se crea una instancia de Singleton utilizando el método getInstance(). Luego se llama al método showMessage() en esa instancia para imprimir el mensaje en la consola.
+## Decorator
+
+Implementé LoggerDecorator para extender la funcionalidad de BaseDatos con logging. Este decorador recibe una instancia de BaseDatos y un Logger en su constructor. En inserta, añade un mensaje de inserción al logger y propaga la llamada a la base de datos original. En registros, añade un mensaje de lectura al logger y devuelve el resultado de la base de datos original. Así, se enriquece la funcionalidad de BaseDatosMemoria sin modificar su código.
+## Mediator
+
+En esta implementación del patrón Mediator, se creó una clase SistemaMediator que coordina las interacciones entre Coche, Radio y Telefono, eliminando las referencias directas entre ellas. Cada componente comunica sus acciones a través del Mediator. La configuración y prueba del sistema se manejan en una clase separada SistemaConfigurador, que organiza la creación de instancias y la prueba de funcionalidades. Este enfoque promueve un diseño desacoplado y facilita la gestión de las interacciones entre los componentes.
